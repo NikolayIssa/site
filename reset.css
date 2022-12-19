@@ -1,0 +1,224 @@
+@font-face {
+  font-family: 'LV' ;
+  src: url(../fonts/centurygothic.ttf);
+}
+
+@font-face {
+font-family: 'GN' ;
+src: url(FONTS/20094.ttf);
+}
+
+@font-face {
+font-family: 'Lato' ;
+src: url(fonts/lato-thin.ttf);
+}
+
+@font-face {
+  font-family: 'Mont' ;
+  src: url(fonts/mont_heavydemo.ttf);
+  }
+
+@font-face {
+  font-family: 'Catalina' ;
+  src: url(fonts/Catallina.otf);
+  }
+
+@font-face {
+    font-family: 'Concrete' ;
+    src: url(fonts/Concrete-Regular.otf);
+    }
+  
+
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background-position: right;
+  background-repeat: no-repeat;
+  min-width: 280px;
+  background: rgb(230, 230, 230);
+  position: absolute;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#99f2c8",GradientType=1);
+} 
+
+hr{
+padding-left: 50%;
+border: 0px;
+height: 2px;
+color: rgb(171, 41, 41);
+background-color: rgb(0, 0, 0);
+width: 50%;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+max-width: 100%;
+display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+* {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+}
+
+.content {
+  position: relative;
+}
+
+.content h2 {
+  color: #fff;
+  font-size: 20vw;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.content h2:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 2px #ffffff;
+}
+
+.content h2:nth-child(2) {
+  color: #ffffff;
+  animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    clip-path: polygon(
+      0% 45%,
+      16% 44%,
+      33% 50%,
+      54% 60%,
+      70% 61%,
+      84% 59%,
+      100% 52%,
+      100% 100%,
+      0% 100%
+    );
+  }
+
+  50% {
+    clip-path: polygon(
+      0% 60%,
+      15% 65%,
+      34% 66%,
+      51% 62%,
+      67% 50%,
+      84% 45%,
+      100% 46%,
+      100% 100%,
+      0% 100%
+    );
+  }
+}
+
+.knopka span{
+  position: relative;
+  display: inline-flex;
+  width: 180px;
+  height: 55px;
+  margin: 0 15px;
+  perspective: 1000px;
+}
+.knopka span a{
+  font-size: 19px;
+  letter-spacing: 1px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform .25s;
+  font-family: 'Montserrat', sans-serif;
+  
+}
+.knopka span a:before,
+.knopka span a:after{
+  position: absolute;
+  content: "Меню";
+  height: 55px;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid black;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.knopka span a:before{
+  color: #fff;
+  background: #000;
+  transform: rotateY(0deg) translateZ(25px);
+}
+.knopka span a:after{
+  content:"Перейти";
+  color: rgb(255, 255, 255);
+  background: hsla(0, 0%, 0%, 0.624);
+  transform: rotateX(90deg) translateZ(25px);
+}
+.knopka span a:hover{
+  transform: translateZ(-25px) rotateX(-90deg);
+}
