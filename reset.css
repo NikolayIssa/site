@@ -27,7 +27,11 @@ src: url(fonts/lato-thin.ttf);
     font-family: 'Concrete' ;
     src: url(fonts/Concrete-Regular.otf);
     }
-  
+
+@font-face {
+  font-family: "Multi";
+  src: url(fonts/MultiroundPro.otf)
+}
 
 *,
 *::before,
@@ -74,8 +78,17 @@ body {
   min-width: 280px;
   background: rgb(230, 230, 230);
   position: absolute;
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#99f2c8",GradientType=1);
 } 
+
+body::-webkit-scrollbar {
+  width: 10px;               /* ширина scrollbar */
+}
+body::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.542);        /* цвет дорожки */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 0, 0);    /* цвет плашки */ 
+}
 
 hr{
 padding-left: 50%;
