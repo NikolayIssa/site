@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="reset.css">
+    <link rel="icon" href="fav2.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="fav2.ico" type="image/x-icon">
+    <link rel="alternate" href="fav2.ico">
     <script src="https://kit.fontawesome.com/e7d6517002.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
     <script src="scripts.js"></script>
@@ -51,6 +54,44 @@
         </div> 
     </div>
 
+    <div class="popup__menu" id="popup__menu">
+        <div class="popup__content">
+            <div class="close_popup3">
+                <a href="##"><img class="close_popup_img" src="img/functions/211652_close_icon.png"></a>
+            </div>
+            <div class="popup__content_img">
+                <img src="img/assortiment/hakw4Iyh6wHCV1Sz3dmoH6Js_2lSXZmxK9VyaCuz-2WpjeI_Ne08PGxR-nuNzLHAgnzMo5bYTjzc6z2h78zHcgM.jpg">
+            </div>
+
+            <div class="popup__content_main">
+                <div class="close_popup2">
+                    <a href="##"><img class="close_popup_img" src="img/functions/211652_close_icon.png"></a>
+                </div>
+                <div class="content__h1">
+                    <h1>Пицца</h1>
+                </div>
+                <hr>
+                <div class="content__fill">
+                    <p>Состав: Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, incidunt
+                         qui asperiores suscipit doloremque eius nam animi id molestias ut est? Tenetur 
+                        in explicabo voluptate dolore vitae itaque consectetur illum.</p>
+                </div>
+
+                <div class="content__buttons_size">
+                    <button class="pizza_size" onclick="before()">35см</button>
+                    <button class="pizza_size" onclick="afterr()">45см</button>
+                </div>
+
+                <div class="content_cost">
+                    <p id="cost">500Р</p>
+                </div>
+
+                <div class="content__button_order">
+                    <a href="https://vk.com/iiisssaa"><button class="order__button">Заказать</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
 <div class="store_block">
         <div class="left_column">
             <div class="sidebar">
@@ -73,10 +114,10 @@
                     <hr>
                     <div class="menulist">
                                 <div class="menuitem">
-                                    <h1>Пицца <br> "Бебра"</h1>
-                                    <img src="img/assortiment/eTqLi_KCNNky3WrCqbDeOqmpzrQ274xSd-eLnUxtugn8nwENc2hNAoZTEZFlRkW8pGeaLT1DdxHSd4gN1K0CiSM.jpg">
-                                    <p>470р</p>
-                                    <button class="button-31">Заказать</button>
+                                    <h1 id="pizzaBebra">Пицца <br> "Бебра"</h1>
+                                    <img src="img/assortiment/eTqLi_KCNNky3WrCqbDeOqmpzrQ274xSd-eLnUxtugn8nwENc2hNAoZTEZFlRkW8pGeaLT1DdxHSd4gN1K0CiSM.jpg" id="pizzabebra_img">
+                                    <p id="pizzabebra_cost">470р</p>
+                                    <a href="#popup__menu" onclick="ChangeForm()"><button class="button-31">Заказать</button></a>
                                 </div>
 
                                 <div class="menuitem">
@@ -132,7 +173,7 @@
                 </div>
 </div>
 <div class="banner2">
-    <img src="img/banners/photo_2022-08-16_00-21-59.jpg">
+    <img src="img/banners/баннер.jpg">
 </div>
 <footer>
     <div class="footer_block">

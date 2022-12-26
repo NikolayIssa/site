@@ -28,6 +28,7 @@ nav{
 
 .nav_buttons{
     width: 50%;
+    height: 90px;
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
@@ -42,8 +43,13 @@ nav{
 nav a{
     width: 160px;
     padding: 1%;
-    color: rgb(0, 0, 0)
-    
+    color: rgb(0, 0, 0);
+    vertical-align: center;
+}
+
+.niger{
+    line-height: 68px;
+    vertical-align: center;
 }
 
 .societis_nav{
@@ -90,6 +96,9 @@ a,a:visited{
 
 
 @media (max-width:1100px){
+    .niger{
+        line-height: 0px;
+    }
     nav{
         width: 100%;
         flex-direction: column;
@@ -105,6 +114,7 @@ a,a:visited{
     .nav_buttons{
         flex-direction: column;
         width: 100%;
+        height: auto;
         align-items: left;
         text-align: left;
         justify-content: left;
@@ -514,7 +524,7 @@ a,a:visited{
     align-items: center;
     margin-top: 2%;
     width: 100%;
-    height: 50vw;
+    height: auto;
     padding: 2%;
     background-color: #669933;
     -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
@@ -536,61 +546,9 @@ a,a:visited{
     font-size: 3vw;
     text-decoration: underline;
 }
-.container_slider_css {
-    padding: 2%;
-    height: 600px;
-    width: 90%;
-    overflow: hidden;
-    position: relative;
-}
-  
-.photo_slider_css {
-    position: absolute;
-    animation: round 16s infinite;
-    opacity: 0;
-    width: 100%;
-}
-  
-  @keyframes round {
-    25% {
-      opacity: 1;
-    }
-    40% {
-      opacity: 0;
-    }
-}
-img:nth-child(1) {
-    animation-delay: 12s
-}
-  
-img:nth-child(2) {
-    animation-delay: 8s;
-}
-  
-img:nth-child(3) {
-    animation-delay: 4s;
-}
-  
-img:nth-child(4) {
-    animation-delay: 0s;
-}
-  
-@media(min-width:0px) and (max-width:320px) {
-      /* совсем маленькие экраны андроидов */
-      .container_slider_css{
-            width: 80%;
-            height: 190px;
-      }
-}
-   
-@media(min-width:321px) and (max-width:480px) {
-      /* популярные разрешения смартфонов уже более позднего поколения андроид */
-      .container_slider_css{
-            width: 80%;
-            height: 190px;
-       }
-}
-  
+
+
+
 .block3{
     width: 100%;
     height: auto;
@@ -1030,7 +988,200 @@ img:nth-child(4) {
     padding: 2%;
 }
 
+.popup__menu{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    visibility: hidden;
+}
+
+.popup__menu:target{
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup__content{
+    z-index: 6;
+    width: 60%;
+    height: 80%;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+}
+
+.close_popup2{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:end;
+    align-items: flex-end;
+    margin-bottom: 20%;
+}
+
+.close_popup3{
+    width: 100%;
+    flex-direction: column;
+    justify-content:end;
+    align-items: flex-end;
+    display: none;
+}
+
+
+.popup__content_img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+}
+
+.popup__content_img img{
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+.popup__content_main{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding: 2%;
+}
+
+.content__h1{
+    font-family: "lv";
+    text-align: center;
+}
+
+.content__fill{
+    font-family: "arial";
+    font-weight: bold;
+    color: grey;
+    margin-bottom: 10%;
+}
+
+.content__buttons_size{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.pizza_size{
+    border: none;
+    background: #cc2b5e;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #753a88, #cc2b5e);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #753a88, #cc2b5e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;    
+    border-radius: 20px;
+    padding: 0 20px;
+    font-size: 1.3vw;
+    font-family: "Multi";
+    margin-right: 4%;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.pizza_size:hover{
+    color: black;
+}
+
+.pizza_size:focus{
+    color: #84fab0;
+    text-decoration: underline;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.content_cost{
+    font-size: 1.7vw;
+    margin-top: 5%;
+    font-family: 'Multi';
+}
+
+.content__button_order{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+}
+
+.order__button{
+    border: none;
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    color: rgb(0, 0, 0);    
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 1.3vw;
+    font-family: "Multi";
+    margin-right: 4%;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.order__button:hover,
+.order__button:active{
+    background-image: linear-gradient(120deg,#8fd3f4 0%,#84fab0 100%);
+    color: white;
+}
+
+.order__button:focus{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+
+
 @media (max-width:1100px){
+    .popup__content{
+        flex-direction: column;
+        width: 90%;
+        overflow-y: scroll;
+        justify-content:flex-start;
+        height:auto;
+    }
+
+    .popup__content_main{
+        width: 100%;
+    }
+
+    .close_popup2{
+        display: none;
+    }
+
+    .pizza_size,
+    .content_cost,
+    .order__button{
+        font-size: 1.2rem;
+    }
+
+    .content__button_order{
+        margin-top: 5%;
+    }
+
+    .close_popup3{
+        display: flex;
+    }
+
+    .popup__content_img{
+        width: 40%;
+    }
+
+    .content__fill{
+    margin-bottom: 2%;
+    }
+
+    .content_cost,
+    .content__button_order{
+    margin-top: 2%;
+    }
+
+    
+
+
     .store_block{
         flex-direction: column;
         justify-content: center;
@@ -1069,7 +1220,7 @@ img:nth-child(4) {
         transition: 0.2s ease-in-out;
     }
 }
-/*Menu sites ------------------------------------------*/
+/*Menu sites --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 
 /*AboutUS site ------------------------------------------*/

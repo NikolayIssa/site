@@ -14,3 +14,17 @@ $(window).scroll(function() {
     transform: 'scale('+(100 + scroll/250)/100+')',
     });
   });
+
+  function before(){
+    document.getElementById('cost')
+    .innerHTML="500Р";
+}
+ 
+function afterr(){
+    document.getElementById('cost')
+    .innerHTML='650Р';
+}
+
+function ChangeForm(){
+  document.getElementById('pizzaBebra')
+}
